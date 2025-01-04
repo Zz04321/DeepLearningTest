@@ -1,7 +1,7 @@
-import pytest
+# tests/test_tester.py
 import torch
-from differential_test.tester import DifferentialTester
-from model_generator.model_builder import ModelBuilder
+from tester import DifferentialTester
+from model_builder import ModelBuilder
 from datasets.data_loader import DataLoader
 
 def test_differential_tester():
@@ -10,8 +10,8 @@ def test_differential_tester():
     data_loader = DataLoader()
 
     # 生成两个等价模型
-    original_model = model_builder.build_model(use_fusion=False)
-    fused_model = model_builder.build_model(use_fusion=True)
+    original_model = model_builder.build_model_one(use_fusion=False)
+    fused_model = model_builder.build_model_one(use_fusion=True)
 
     test_data = data_loader.generate_random_data()
 
