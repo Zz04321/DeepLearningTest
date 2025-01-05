@@ -1,6 +1,7 @@
 import torch.nn as nn
 
 class ModelBuilder:
+    # 构建模型：卷积 + BatchNorm + ReLU + 池化 + 展平 + 全连接层 + Dropout
     def build_model_one(self, use_fusion=False):
         model = nn.Sequential(
             nn.Conv2d(3, 16, kernel_size=3, padding=1),
