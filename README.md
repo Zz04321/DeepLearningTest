@@ -1,4 +1,4 @@
-# 深度学习框架差分测试工具 (基于 PyTorch)
+# 基于等价融合算子的差分测试 (基于 PyTorch)
 ## 详细设计请见设计文档
 ## 项目简介
 本项目旨在开发一种基于等价融合算子的深度学习框架差分测试工具，帮助识别 PyTorch 框架中的潜在缺陷。通过构造等价的深度学习模型，并比较其在不同场景下的行为一致性，检测框架算子的异常表现。
@@ -46,3 +46,9 @@ project/
 ### 5. 结果分析与可视化
 记录测试过程中的差异，生成清晰的测试报告。
 可视化模型行为差异，便于分析。
+Visualizer 类负责可视化测试结果。通过调用 visualize_difference 和 plot_differences_box 方法，可视化参数差异和箱线图，model1示例如下：
+![difference_between_models_0](https://github.com/user-attachments/assets/ccdf823e-e4ae-467c-b92d-466a2a9ddfc2) 
+![box_plot_of_differences_0](https://github.com/user-attachments/assets/dad4e2fa-000d-41f3-955a-1baa87803c86) 
+通过differences值以及可视化可见，融合算子与非融合算子在示例模型下输出结果差异在可接受范围内。
+
+
