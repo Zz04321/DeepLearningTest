@@ -19,7 +19,7 @@ project/
 ├── datasets/              # 数据集模块  
 │   ├── data_loader.py     # 数据加载工具  
 ├── utils/                 # 工具模块  
-│   ├── visualizer.py      # 可视化工具 
+│   ├── visualizer.py      # 可视化工具  
 ├── log/                   # 日志模块  
 ├── plot/                  # 图表模块  
 └── README.md              # 项目文档
